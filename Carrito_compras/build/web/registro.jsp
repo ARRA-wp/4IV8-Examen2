@@ -17,7 +17,7 @@
         
        <form id="form_911240" class="appnitro"  method="post" action="registrousu.jsp">
 					<div class="form_description">
-			<h2>Inicio de Sesion</h2>
+			<h2>Registro</h2>
 			<p></p>
 		</div>						
 			<ul >
