@@ -36,19 +36,19 @@ window.onload = function () {
         },
         {
             id: 5,
-            nombre: 'Crema',
+            nombre: 'Vainilla',
             precio: 50,
             cantidad: 10,
             contenedor: 'Cono',
-            imagen: 'fresas.jpg'
+            imagen: './IMG/vainilla.jpg'
         },
         {
             id: 6,
-            nombre: 'Chocolate',
+            nombre: 'Brownie',
             precio: 60,
             cantidad: 10,
             contenedor: 'Cono',
-            imagen: 'fresas.jpg'
+            imagen: './IMG/brownie.jpeg'
         }
 
     ];
