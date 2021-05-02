@@ -1,0 +1,174 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2/05/2021, 01:35:34 PM
+    Author     : abel1
+*/
+
+* {box-sizing: border-box;}
+
+body { 
+  margin: 0;
+  
+}
+
+.header {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 20px 10px;
+ font-family: 'Yeseva One', cursive;
+}
+
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 25px; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+.header  img {
+  float: right;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  padding: 2px;
+}
+
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.header a:hover {
+  background-color: #82A8D7;
+  color: #CADAEE;
+}
+
+.header a.active {
+  background-color: #3B75BC;
+  color: white;
+}
+
+.header-right {
+  float: right;
+}
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+    
+  }
+  
+  .header-right {
+    float: none;
+  }
+}
+
+.containeri {
+  position: relative;
+  font-family: Arial;
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+.texto {
+
+  padding: 20px;
+
+}
+
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.column h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+.column h3{
+    font-size: 1.2em;
+    font-family: 'Luckiest Guy', cursive;
+}
+.column h5{
+    font-size: .9em;
+    font-family: 'Yeseva One', cursive;
+}
+.column p{
+    font-size: 1em;
+    font-family: 'Rufina', serif;
+
+}
+
+.rowt {
+  margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.rowt,
+.rowt > .column {
+  padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* Clear floats after rows */ 
+.rowt:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .column {
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+
+.formulario{
+    padding: 5rem;
+ 
+    
+}
+.formularioD{
+     padding: 5rem;
+    background-color: #04AA6D;
+    color: white;
+    width: 50%;
+    border-radius: 14px;
+}
+.formulario h2{
+    font-size: 2em;
+    font-family: 'Yeseva One', cursive;
+}
+.formulario ul, li{
+     font-size: 1.2em;
+    font-family: 'Yeseva One', cursive;
+}
