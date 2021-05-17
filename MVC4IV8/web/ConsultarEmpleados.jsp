@@ -1,0 +1,62 @@
+<%-- 
+    Document   : ConsultarEmpleados
+    Created on : 13/05/2021, 05:47:11 PM
+    Author     : demon
+--%>
+
+<%@page import="java.util.List"%>
+<%@page import="Control.*" %>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Tabla de Empleados</title>
+    </head>
+    <body>
+        <h1>Tabla General de usuarios</h1>
+        <table border="2" >
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Password</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <%
+                    
+                try{    
+                    List<Empleado> lista = AccionesEmpleado.getAllEmpleados();
+                    System.out.println(lista);
+                    
+                    
+                    for(Empleado e : lista){
+                    %>
+                    <tr>
+                        <td> <%=e.getId() %> </td>
+                        <td> <%=e.getNombre() %> </td>
+                        <td> <%=e.getPassword()%> </td>
+                        <td> <a href="editar.jsp?id=<%=e.getId()%>" >Editar</a> </td>
+                        <td> <a href="borrar?id=<%=e.getId()%>" >Borrar</a> </td>
+                    </tr>    
+                    <%
+                    }
+                }catch(Exception ex){
+                    System.out.println("Error");
+                    System.out.println(ex.getMessage());
+                }finally{
+
+                }
+                    %>
+                
+            </tbody>
+            
+        </table>
+        <a href="index.html" >Regresar al Menu Principal</a> 
+        <br>
+        
+    </body>
+</html>
