@@ -1,0 +1,116 @@
+.tablas{
+    padding: 4rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.tablas h1{
+    font-size: 2em; 
+}
+.tablas h2{
+    font-size: 1.5em; 
+}
+.tablas{
+    margin: 1rem;
+    
+}
+
+.tablas section, table{
+    border-collapse: collapse;
+    width: 100%;
+    border: 7px solid;
+    margin-right: 300px;
+    border:#f4f4f4;
+}
+
+.tablas th, td {
+    text-align: center;
+    padding: .5rem;
+    border:#f4f4f4;
+    ght: 10px;   
+}
+
+.tablas th{
+    font-size: .8em;
+    border: #f4f4f4;
+  
+   
+}
+.tablas tbody{
+    font-size: 1em;
+    border: solid #f4f4f4;
+    
+ 
+}
+.tablas td{
+  
+    border: solid #373737;
+}
+.tablas col {
+    font-size: .8em;
+    border: #f4f4f4 solid;
+ 
+}
+.margen{
+   padding: 4rem;
+  
+}
+.margen h1{
+   text-align: center;
+    font-size: 2.4em;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f0f0f0;
+  }
+  
+  /* Add a background color when the inputs get focus */
+  input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  
+  
+.tabla-img table{
+    border-collapse: collapse;
+    width: 70%;
+    border: 7px solid;
+
+    margin: 50px 190px 50px;
+    
+    border:#f4f4f4;
+   
+}
+
+.tabla-img th, td{
+    text-align: center;
+    padding: .5px;
+    border:#f4f4f4;
+    ght: 10px;   
+}
+.tabla-img th{
+    font-size: .8em;
+    border: #f4f4f4;
+   
+}
+.tabla-img tbody{
+    font-size: 1em;
+    border: solid #373737;
+    
+ 
+}
+.tabla-img td{
+  
+    border: solid #373737;
+}
+.tabla-img col {
+    font-size: .8em;
+    border: #f4f4f4 solid;
+ 
+}

@@ -1,0 +1,48 @@
+
+.botones{
+    margin-right: 50px; 
+}
+
+.botones a, button{
+    display: inline;
+    margin-top: 1.5rem; 
+    margin-left: 3rem;
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.2em;
+    width: 39%;
+    text-decoration: none;
+   
+}
+.botones button{
+    padding: 6px 6px 6px 2px;
+    color: black;
+    background-color: #CBBE83;
+    border-radius: 3px;
+    text-align: center;  
+}
+
+.botoness{
+    margin: 50px; 
+}
+
+.botoness a, button{
+    display: inline;
+    margin-top: 1.5rem; 
+    margin: 3rem;
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.2em;
+    width: 39%;
+    text-decoration: none;
+   
+}
+.botoness button{
+    padding: 6px 6px 6px 2px;
+    color: black;
+    background-color: #CBBE83;
+    border-radius: 3px;
+    text-align: center;  
+}
+
+
+
+  

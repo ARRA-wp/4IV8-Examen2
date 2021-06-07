@@ -1,0 +1,116 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Modelo;
+
+/**
+ *
+ * @author Rafael
+ */
+
+import java.sql.*;
+import Utils.Conexion;
+import java.util.ArrayList;
+
+public class ProductoDB {
+    
+    //Traer todos los elementos para el catalogo de los productos
+    
+    public static ArrayList<Producto> obtenerProducto(){
+        
+        ArrayList<Producto> lista = new ArrayList<Producto>();
+        try{
+            CallableStatement cl = Conexion.getConection().prepareCall("{call listarProductos()}") ;
+            ResultSet rs = cl.executeQuery();
+            while(rs.next()){
+                Producto p = new Producto(rs.getInt(1),rs.getString(2),rs.getDouble(3),rs.getString(4));
+            lista.add(p);
+            }
+        }catch(Exception e){
+            System.out.println("Error al consultar todos los productos");
+            
+        }
+        return lista;
+    
+    }
+    
+    //Obtener uno solo
+    
+    public static Producto obtenerProducto(int codigo){
+      Producto p=null;
+      
+      try{
+          CallableStatement cl=Conexion.getConection().prepareCall("{call sp_ProductoCod(?)}");
+          cl.setInt(1, codigo);
+          //Mando mi parametro
+          ResultSet rs=cl.executeQuery();
+          while(rs.next()){
+          
+              p=new Producto(rs.getInt(1),rs.getString(2),rs.getDouble(3),rs.getString(4));
+              
+          }
+          
+      }catch(Exception e){
+      
+      }
+      return p;
+    }
+    
+    public static boolean actualizarProducto(Producto varproducto){
+         boolean rpta=false;
+         try{
+             Connection cn= Conexion.getConection();
+             CallableStatement cl=cn.prepareCall("{call sp_actualizarPro(?,?,?)}");
+             cl.setInt(1, varproducto.getCodigoProducto());
+             cl.setString(2, varproducto.getNombre());
+              cl.setDouble(3, varproducto.getPrecio());
+              int i=cl.executeUpdate();
+              
+              if(i==1){
+                  rpta=true;
+              }else{
+                  rpta=false;
+              }
+              
+         }catch(Exception e){
+             System.out.println("Error Metodo");
+             System.out.println(e.getMessage());
+             
+         }
+         
+         return rpta;
+    }
+    
+    public static boolean insertarProducto(Producto p){
+    boolean rpta=false;
+    
+    try{
+        Connection cn=Conexion.getConection();
+        CallableStatement cl=cn.prepareCall("{call sp_insertarPro(?,?,?,?)}");
+        cl.setInt(1, p.getCodigoProducto());
+        cl.setString(2, p.getNombre());
+        cl.setDouble(3, p.getPrecio());
+        cl.setString(4, p.getImagen());
+        
+        int i=cl.executeUpdate();
+        
+        if(i==1){
+            rpta=true;
+        }else{
+            rpta=false;
+        }
+        
+        
+    }catch(Exception e){
+        System.out.println("Erro en el metodo insertar");
+        System.out.println(e.getMessage());
+    }
+    
+    return rpta;
+    }
+    
+    
+    
+}
